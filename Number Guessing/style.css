@@ -1,0 +1,115 @@
+html{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url(image.jpg);
+  background-size: cover;
+}
+
+input{
+  background-color: transparent;
+  border:none;
+  outline:none;
+  font-size: 20px;
+  padding-left:20px;
+  color: #d662cd;
+  font-weight: 500;
+  border-width:2px;
+  border-style: solid;
+  border-color:#778C79;
+  border-radius: 50px;
+}
+
+button {
+  background-color: #fc867b;
+  color: black;
+  padding: 12px 25px;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+button:hover{
+  background-color: #700900;
+
+}
+
+/* bubble animation code */
+#game-container {
+  background: linear-gradient(45deg, #a8ddbd,rgb(234, 163, 236));
+  background-size: cover;
+  padding: 20px;
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bubble styling */
+.bubble {
+  position: absolute;
+  bottom: -200px; 
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 10s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+.bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  right: 50%;
+  animation-duration: 10s;
+}
+
+.bubble:nth-child(2)
+{
+  width: 90px;
+  height: 90px;
+  right: 70%;
+  animation-duration: 12s;
+}
+
+.bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  animation-duration: 13s;
+}
+
+.bubble:nth-child(4) {
+  width: 30px;
+  height: 30px;
+  nav-right: 50%;
+  animation-duration: 14s;
+}
+
+.bubble:nth-child(5)
+{
+  width: 90px;
+  height: 90px;
+  left: 70%;
+  animation-duration: 15s;
+}
+
+ @keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1200px);
+    opacity: 0;
+  }
+} 
+
